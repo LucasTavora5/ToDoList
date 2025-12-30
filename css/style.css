@@ -1,0 +1,263 @@
+/* ===============================
+   RESET + BASE
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #0f172a;
+  --card: #020617;
+  --primary: #38bdf8;
+  --primary-hover: #0ea5e9;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+  --danger: #ef4444;
+  --success: #22c55e;
+  --border: #1e293b;
+}
+
+body {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
+  background-image: url('../assets/bgimg.avif');
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 3rem 1rem;
+}
+
+/* ===============================
+   CONTAINER
+================================ */
+.todo-container {
+  width: 100%;
+  max-width: 480px;
+  background: var(--card);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+/* ===============================
+   FORMULÁRIOS
+================================ */
+form {
+  margin-bottom: 1.5rem;
+}
+
+form p {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.form-control {
+  display: flex;
+  gap: 0.5rem;
+}
+
+input[type='text'] {
+  flex: 1;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.7rem 0.8rem;
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+input::placeholder {
+  color: var(--muted);
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+/* ===============================
+   BOTÕES
+================================ */
+button {
+  background: var(--primary);
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 0.8rem;
+  color: #020617;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background 0.2s ease,
+    transform 0.1s ease;
+}
+
+button:hover {
+  background: var(--primary-hover);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+#cancel-edit-btn {
+  width: 100%;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  margin-top: 0.5rem;
+}
+
+#cancel-edit-btn:hover {
+  color: var(--text);
+  border-color: var(--primary);
+}
+
+/* ===============================
+   TOOLBAR
+================================ */
+.toolbar {
+  margin: 1.5rem 0;
+}
+
+.search h3 {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: var(--muted);
+}
+
+.search form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+#erase-button {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+
+#erase-button:hover {
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+/* ===============================
+   FILTRO
+================================ */
+.filter {
+  margin-bottom: 1.5rem;
+}
+
+.filter h4 {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: var(--muted);
+}
+
+select {
+  width: 100%;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.6rem;
+  color: #000;
+}
+
+select:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+/* ===============================
+   LISTA DE TODOS
+================================ */
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.todo {
+  background: #020617;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.8rem;
+  display: grid;
+  grid-template-columns: 1fr auto auto auto;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.todo h3 {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* ===============================
+   AÇÕES
+================================ */
+.finish-todo {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--success);
+}
+
+.finish-todo:hover {
+  border-color: var(--success);
+}
+
+.edit-todo {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--primary);
+}
+
+.edit-todo:hover {
+  border-color: var(--primary);
+}
+
+.remove-todo {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--danger);
+}
+
+.remove-todo:hover {
+  border-color: var(--danger);
+}
+
+/* ===============================
+   ESTADOS
+================================ */
+.todo.done h3 {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+.filter {
+  margin-top: 1.5rem;
+  padding: 0.8rem;
+  border: 1px solid #334155;
+  border-radius: 8px;
+}
+
+.filter h4 {
+  margin-bottom: 0.5rem;
+}
