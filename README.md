@@ -1,1 +1,2 @@
 Projeto de To-Do List desenvolvido com HTML, CSS e JavaScript puro, com funcionalidades de adicionar, editar, remover e marcar tarefas como concluídas. O objetivo do projeto é praticar manipulação do DOM, eventos e lógica de estado, servindo como base conceitual para frameworks como React.
+<img width="472" height="774" alt="image" src="https://github.com/user-attachments/assets/4652efd8-a603-45a2-8a8d-65fef5494b49" />
